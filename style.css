@@ -629,18 +629,26 @@ label{
 
     aside{
         display: none;
-        position: absolute;
+        position: fixed;
         z-index: 2;
         align-content: space-evenly;
         right: 0;
         background-color: black;
         height: 100%;
-        animation: right 0.2s ease-in-out;
+        animation: right 0.5s ease-in-out;
         nav{
             margin-top: 10px;
         }
     }
-
+    @keyframes right {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+        
+    }
     label{
         display: block;
         z-index: 10;
